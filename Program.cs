@@ -8,10 +8,12 @@ namespace ToDoConsole
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Bem-vindo(a) ao aplicativo ToDo do Guilherme Damasio!");
             List<string> listaTarefa = new List<string>();
             string opcao = "";
-            
+
+            ExibirMenu();
 
             while (opcao != "e")
             {
@@ -65,5 +67,15 @@ namespace ToDoConsole
                 
             }
         }
+        static void ExibirMenu()
+        {
+
+            Console.WriteLine("\nEscolha uma opção:");
+            Console.WriteLine("1 - Adicionar uma tarefa.");
+            Console.WriteLine("2 - Ver todas as tarefas adicionadas.");
+            Console.WriteLine("3 - Remover uma tarefa.");
+            Console.WriteLine("4 - Sair do programa.");
+        }
+
     }
 }
