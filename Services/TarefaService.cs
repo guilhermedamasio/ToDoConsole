@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ToDoConsole.Models;
 
 namespace ToDoConsole.Services
 {
-    internal class TarefaService
+    public class TarefaService
     {
+        public List<Tarefa> listaDeTarefas = new List<Tarefa>();
     }
 }
