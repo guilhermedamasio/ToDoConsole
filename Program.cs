@@ -26,11 +26,25 @@ namespace ToDoConsole
                 {
                     Console.WriteLine("Por favor, insira o nome da tarefa para adicionar ao aplicativo.");
                     string nomeTarefa = Console.ReadLine();
+                    listaTarefa.Add(nomeTarefa);
+                    Console.WriteLine("Tarefa adicionada com sucesso!");
 
                 }
+                else if (opcao == "2")
+                {
+                    Console.WriteLine("Tarefas adicionadas:");
+                    for (int i = 0; i < listaTarefa.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {listaTarefa[i]}");
+                    }
+                }
 
-
-
+                else
+                {
+                    Console.WriteLine("\nSaindo do programa. Até mais!");
+                    opcao = "e";
+                }
+           
                 
             }
         }
