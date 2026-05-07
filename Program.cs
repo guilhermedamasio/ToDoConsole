@@ -38,7 +38,21 @@ namespace ToDoConsole
                         Console.WriteLine($"{i + 1}. {listaTarefa[i]}");
                     }
                 }
-
+                else if (opcao == "3")
+                {
+                    Console.WriteLine("Digite o número da tarefa que deseja remover:");
+                    int numeroTarefa;
+                    if (int.TryParse(Console.ReadLine(), out numeroTarefa) && numeroTarefa > 0 && numeroTarefa <= listaTarefa.Count)
+                    {
+                        string tarefaRemovida = listaTarefa[numeroTarefa - 1];
+                        listaTarefa.RemoveAt(numeroTarefa - 1);
+                        Console.WriteLine($"Tarefa '{tarefaRemovida}' removida com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número de tarefa inválido. Por favor, tente novamente.");
+                    }
+                }
                 else
                 {
                     Console.WriteLine("\nSaindo do programa. Até mais!");
