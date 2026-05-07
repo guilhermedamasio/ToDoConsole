@@ -53,12 +53,15 @@ namespace ToDoConsole
                         Console.WriteLine("Número de tarefa inválido. Por favor, tente novamente.");
                     }
                 }
-                else
+                else if (opcao == "4") 
                 {
                     Console.WriteLine("\nSaindo do programa. Até mais!");
                     opcao = "e";
                 }
-           
+                else
+                {
+                    Console.WriteLine("Opção inválida. Por favor, escolha uma opção válida.");
+                }
                 
             }
         }
